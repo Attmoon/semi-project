@@ -12,28 +12,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-
 <title>Insert title here</title>
 </head>
 <body>
-	
-	<form id="form1" action="${appRoot }/Member/signup" method="post">
-		아이디 : <input type="text" name="id" /> 
-		<button id="checkIdButton1" type="button">아이디 중복 확인</button>
-		<p id="idMessage1"></p>	
-		<br />
-		
-		패스워드 : <input id="passwordInput1" type="text" name="password" /> <br />
-		
-		패스워드확인 : <input id="passwordInput2" type="text" name="passwordConfirm" /> <br />
-		<p id="passwordMessage1"></p>
-		
-		닉네임 : <input type="text" name="nickName" />
-		<button id="checkNickNameButton1" type="button">닉네임 중복 확인</button>
-		<p id="nickNameMessage1"></p>
-		<br />
-		
-		<button id="submitButton1" type="submit">회원가입</button>
+	<form action="${appRoot }/Member/login" method="post">
+		아이디 : <input type="text" name="username" /> <br />
+		패스워드 : <input type="password" name="password" /> <br />
+		<input type="checkbox" name="remember-me" id="" /> 자동로그인
+		<input type="submit" value="로그인" />
 	</form>
 </body>
 </html>

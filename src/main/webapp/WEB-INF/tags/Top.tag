@@ -1,5 +1,6 @@
 <%@ tag language="java" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 <style>
    .container2 {
@@ -60,5 +61,10 @@
       <div class="fl">
          
       </div>
-      <div class="right2"><a href="">로그인</a> <a href="/jeju/Member/signup">회원가입</a></div>
+      <div class="right2">
+		  <sec:authorize access="not isAuthenticated()">
+	      <a href="/jeju/Member/login">로그인</a>
+	      </sec:authorize> 
+	      <a href="/jeju/Member/signup">회원가입</a>
+      </div>
    </div>

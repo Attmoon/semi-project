@@ -7,8 +7,27 @@
 
 <!-- security 기본구성이 있어야함 -->
 <security:http>
-	<security:form-login/>
+	<security:csrf disabled="true"/>
+	<security:form-login always-use-default-target="true" login-page="/Member/login" default-target-url="/Main/home" />
+	<security:logout logout-success-url="/Main/home" />
+	<security:remember-me/>
 </security:http>
 
-<security:authentication-manager></security:authentication-manager>
+<security:authentication-manager>
+	<security:authentication-provider> <!-- db를 통해 제공 -->
+			<security:jdbc-user-service 
+				data-source-ref="dataSource"
+				users-by-username-query="
+					SELECT id, password, 1
+					FROM Member
+					WHERE id = ?
+				"
+				authorities-by-username-query="
+					SELECT memberId, role
+					FROM Auth
+					WHERE memberId = ?
+				"
+				/>
+		</security:authentication-provider>
+</security:authentication-manager>
 </beans>
