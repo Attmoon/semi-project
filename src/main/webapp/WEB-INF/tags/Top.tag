@@ -42,8 +42,9 @@
       margin-right : 6%;
    }
    
-
 </style>
+
+<c:url value="/logout" var="logoutUrl"></c:url>
 
    <div class="container2">
       <div class="header2">header2
@@ -63,8 +64,14 @@
       </div>
       <div class="right2">
 		  <sec:authorize access="not isAuthenticated()">
-	      <a href="/jeju/Member/login">로그인</a>
+	      	<a href="/jeju/Member/login">로그인</a>
 	      </sec:authorize> 
 	      <a href="/jeju/Member/signup">회원가입</a>
+	      <sec:authorize access="isAuthenticated()"> 
+            <button type="submit" form="logoutForm1">로그아웃</button>
+     	 </sec:authorize>
+      </div>
+      <div class="d-none">
+      	<form action="${logoutUrl }" id="logoutForm1" method="post" ></form>
       </div>
    </div>
