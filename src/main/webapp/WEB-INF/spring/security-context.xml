@@ -15,7 +15,6 @@
       <security:logout logout-success-url="/Main/home"/>
       <security:remember-me/>
       
-      <security:intercept-url pattern="/Board/insert" access="isAuthenticated()" />
    </security:http>
 
 <security:authentication-manager>

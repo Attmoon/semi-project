@@ -27,7 +27,6 @@ public class BoardController {
 	
 	@PostMapping("insert")
 	public String insert(BoardDto board, 
-			MultipartFile file, 
 			Principal principal, 
 			RedirectAttributes rttr) {
 		
