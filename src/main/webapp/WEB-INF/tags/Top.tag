@@ -69,7 +69,10 @@
 	      <a href="/jeju/Member/signup">회원가입</a>
 	      <sec:authorize access="isAuthenticated()"> 
             <button type="submit" form="logoutForm1">로그아웃</button>
-     	 </sec:authorize>
+     	  </sec:authorize>
+     	  <sec:authorize access="isAuthenticated()"> 
+            <a href="/jeju/Board/insert">글쓰기</a>
+     	  </sec:authorize>
       </div>
       <div class="d-none">
       	<form action="${logoutUrl }" id="logoutForm1" method="post" ></form>
