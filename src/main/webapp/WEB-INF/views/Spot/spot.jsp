@@ -136,7 +136,7 @@
 			</div>
 	 	</div>
 	 	<div class="main-right">
-            <a href="/jeju/Board/insert">글쓰기</a>
+            <a href="/jeju/Board/insert?c=1">글쓰기</a>
 	 	</div>
 	 </div>
 </body>

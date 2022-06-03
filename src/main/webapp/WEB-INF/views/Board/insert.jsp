@@ -24,7 +24,7 @@
 				<h1>글 작성</h1>
 				
 				<form action="${appRoot }/Board/insert" method="post" >
-					<input type="hidden" name="id" value="${board.id }" />
+					<input type="hidden" name="id" />
 					<div>
 						<label class="form-label" for="input1">제목</label>
 						<input class="form-control" type="text" name="title" required id="input1" />

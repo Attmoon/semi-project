@@ -238,7 +238,13 @@
                    <tr><td>하산</td><td>어리목 / 영실 코스 (윗세오름 대피소)</td><td>14:00</td><td>15:00</td><td>16:00</td></tr>
                    <tr><td></td><td>관음사 코스 (용진각 대피소)</td><td>13:30</td><td>14:30</td><td>15:30</td></tr>
                    <tr><td></td><td>성판악 코스 (진달래밭 대피소)</td><td>13:30</td><td>14:30</td><td>15:30</td></tr>
+                   <div>
+						<label class="form-label" for="textarea1">본문</label>
+						<textarea class="form-control" name="body" id="textarea1"
+							cols="30" rows="10" readonly>${board.body }</textarea>
+					</div>
                </table> 
+               
             </div> 
 			  
 			</div>

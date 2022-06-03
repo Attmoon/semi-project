@@ -5,7 +5,7 @@
 <mapper namespace="com.tour.jeju.mapper.BoardMapper">
 	
 	<insert id="insertBoard" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
-		INSERT INTO Board (title, body, memberId)
-		VALUES (#{title}, #{body}, #{memberId})
+		INSERT INTO Board (title, body)
+		VALUES (#{title}, #{body})
 	</insert>
 </mapper>
